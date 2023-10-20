@@ -1,0 +1,61 @@
+:root {
+    --cinzaClaro: rgb(240, 240, 240);
+    --cinzaEscuro: rgb(95, 94, 94);
+}
+
+.caixa {
+    position: fixed;
+    height: 100%;
+    width: 400px;
+    background-color: white;
+    left: -450px;
+    top: 0;
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.166) 0px 12px 48px;
+    transition: 1s;
+
+}
+.caixa .menu-items .menu-item {
+    font-size: 20pt;
+    cursor: pointer;
+}
+.caixa .menu-items .menu-item:hover
+{
+    background-color: var(--cinzaClaro);
+}
+
+.caixa .material-icons {
+    width: 100%;
+    text-align: right;
+    font-size: 30pt;
+    color:black;
+    cursor: pointer;
+}
+
+body {
+    overflow: visible;
+}
+
+html {
+    font-family: 'Open sans';
+    font-size: 17px;
+}
+
+h1+div {
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 60pt;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.texto {
+    padding: 10px;
+    border-bottom: 1px solid rgb(210, 209, 209);
+}
+
+.texto div {
+    padding-bottom: 10px;
+}
