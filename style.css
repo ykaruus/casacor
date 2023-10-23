@@ -1,44 +1,118 @@
 :root {
-    --cinzaClaro: rgb(240, 240, 240);
-    --cinzaEscuro: rgb(95, 94, 94);
+    --cinzaClaro: rgba(117, 117, 117, 0.733);
+    --cinzaEscuro: rgb(78, 78, 78);
+    --cinzaEscuroLeve: rgb(73, 73, 73);
+    --selection: rgb(0, 162, 255);
 }
 
 .caixa {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     height: 100%;
-    width: 400px;
-    background-color: white;
+    width: 300px;
     left: -450px;
     top: 0;
     z-index: 2;
-    box-shadow: rgba(0, 0, 0, 0.166) 0px 12px 48px;
+    box-shadow: rgba(3, 3, 3, 0.166) 0px 12px 48px;
     transition: 1s;
+    color: white;
 
 }
+
 .caixa .menu-items .menu-item {
+    padding: 10px;
+    border-bottom: 1px solid var(--cinzaClaro);
     font-size: 20pt;
     cursor: pointer;
-}
-.caixa .menu-items .menu-item:hover
-{
-    background-color: var(--cinzaClaro);
+    vertical-align: middle;
 }
 
-.caixa .material-icons {
+.menu-item:hover {
+    color: powderblue;
+}
+
+
+.caixa span {
+    padding: 10px;
     width: 100%;
     text-align: right;
-    font-size: 30pt;
-    color:black;
+    font-size: 30px;
+}
+
+.caixa span i {
     cursor: pointer;
+}
+.caixa h1 {
+    text-align: center;
+}
+.caixa .texto {
+    border-bottom-color: var(--cinzaClaro);
 }
 
 body {
     overflow: visible;
+    user-select: none;
 }
 
 html {
     font-family: 'Open sans';
     font-size: 17px;
+}
+
+.curve{
+    width: 100%;
+    height: 100px;
+    border-bottom-left-radius:none 60%;
+    border-bottom-right-radius:none 60%;
+}
+
+nav {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10px;
+    border-bottom-left-radius:70% 20%;
+    border-bottom-right-radius:70% 20%;
+}
+
+nav ul {
+    color: var(--cinzaEscuro);
+    height: 100x;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+nav ul span {
+    display: inline-block;
+    vertical-align: middle;
+}
+nav ul span .material-icons {
+    font-size: 50px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+nav ul span .material-icons:hover {
+    color: black;
+}
+nav ul span .text-menu {
+    font-size: 20pt;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+nav ul span .text-menu:hover {
+    color: black;
+}
+
+nav .material-icons {
+    text-align: right;
+}
+
+nav ul span .ativo {
+    color:var(--selection);
 }
 
 h1+div {
@@ -54,8 +128,75 @@ h1+div {
 .texto {
     padding: 10px;
     border-bottom: 1px solid rgb(210, 209, 209);
+    width: 100%;
 }
 
-.texto div {
-    padding-bottom: 10px;
+.nalinha {
+    display: inline-block;
+}
+
+.texto ul span div
+{
+
+}
+
+.texto ul span p {
+    color: var(--cinzaEscuro);
+    font-size: 20pt;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+}
+
+.footer {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20pt;
+    padding: 10px;
+    height: 100px;
+    width: 100%;
+    bottom: 0;
+    box-shadow: rgba(3, 3, 3, 0.166) 0px 12px 48px;
+}
+
+.footer ul {
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul span{
+    margin-right: 20px;
+
+}
+
+.footer ul span a {
+    text-decoration: none;
+    color: var(--cinzaEscuro);
+    transition: 0.5s;
+    
+}
+a#youtube:hover {
+    color: red;
+}
+a#instagram:hover {
+    color: blueviolet;
+}
+a#facebook:hover, a#linkedin:hover {
+    color: blue;
+}
+
+
+@keyframes teste {
+    to {
+        border-top-right-radius: 5% 5%;
+        border-bottom-left-radius: 5% 5%;
+    }
+    from {
+        border-top-right-radius: 5% 50%;
+    }
 }
